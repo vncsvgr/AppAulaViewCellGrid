@@ -39,5 +39,11 @@ namespace AppGrid
                 lstAlunos.ItemsSource = aluno;
             }
         }
+
+        private void sbAlunos_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            lstAlunos.ItemsSource = aluno.Where(
+                x => x.Nome.ToUpper().Contains(sbAlunos.Text.ToUpper()));
+        }
     }
 }

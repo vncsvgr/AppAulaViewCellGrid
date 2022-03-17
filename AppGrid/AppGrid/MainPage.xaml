@@ -9,15 +9,17 @@
             <Label Text="ALUNOS" HorizontalTextAlignment="Center" FontSize="36" FontAttributes="Bold" />
         </Frame>
 
+        <SearchBar x:Name="sbAlunos" TextChanged="sbAlunos_TextChanged" />
+
         <ListView x:Name="lstAlunos" ItemSelected="lstAlunos_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
 
                         <Grid ColumnDefinitions="*,*,*">
-                            <Label Text="{Binding Nome}" />
-                            <Label Grid.Column="1" Text="{Binding Curso}" />
-                            <Label Grid.Column="2" Text="{Binding Cidade}" />
+                            <Label Text="{Binding Nome}" HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="1" Text="{Binding Curso}"  HorizontalTextAlignment="Center" />
+                            <Label Grid.Column="2" Text="{Binding Cidade}"  HorizontalTextAlignment="Center"/>
                         </Grid>
                         
                     </ViewCell>
